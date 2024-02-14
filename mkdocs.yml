@@ -1,0 +1,106 @@
+---
+site_name: Test lesson
+copyright: Copyright &copy; 2020 - 2024 ACENET
+
+# nav:
+#   - Home: 'index.md'
+#   - Code of Conduct: 'Code_of_Conduct.md'
+#   - Setup: 'setup.md'
+#   - Episodes:
+#     - 'episodes/01-introduction.md'
+#     - 'episodes/topologies.md'
+#     - 'episodes/break.md'
+#     - 'episodes/mixtures_1_into.md'
+#     - 'episodes/mixtures_2_generate_topologies.md'
+#   - Extras:
+#     - Reference:        'extras/bibliography.md'
+#     - About:            'extras/about.md'
+#     - Discussion:       'extras/discussion.md'
+#     - Instructor Notes: 'extras/guide.md'
+#   - Licenses: 'LICENSE.md'
+
+theme:
+  name: material
+  custom_dir: acenet_theme/
+  logo: img/an-logo_nametag_white.png
+  favicon: favicons/favicon-16x16.png
+
+  palette:
+    - scheme: acenet
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    # - content.code.copy # add copy button to all code cells
+    - announce.dismiss          # Announcement bar: Mark as read
+    - header.autohide           # Automatic hiding the header
+    - navigation.expand         # Navigation expansion https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
+    - navigation.footer         # Footer Navigation
+    - navigation.header         # 
+    - navigation.instant        # Instant loading (without fully reloading the page)
+    - navigation.tabs           # Navigation tabs
+    - navigation.tracking       # Anchor tracking
+    - toc.follow                # Anchor following
+    - toc.integrate             # Navigation integration
+
+  
+plugins:
+  # - blog
+  - bibtex:
+      bib_file: "references.bib"
+      csl_file: "csl/plos-one.csl"
+  - search
+
+markdown_extensions:
+  - admonition                    # Admonition / Call-outs
+  - attr_list                     # Grids
+  - def_list                      # lists
+  - footnotes                     # bibtex
+  - md_in_html                    # Grids
+  - tables                        # Data Tables
+  - toc:
+      permalink: true             # Anchor links for headers
+      permalink_title: Anchor link to this section for reference
+    # Python Markdown Extensions:
+  - pymdownx.highlight:           # Code blocks
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.arithmatex:          # Math 
+      generic: true
+  - pymdownx.details              # Admonition / Call-outs
+  - pymdownx.inlinehilite         # Code blocks
+  - pymdownx.snippets             # Code blocks
+  - pymdownx.superfences:         # Admonition / Diagrams / Code blocks
+      custom_fences:
+        - name: mermaid           # Diagrams (Mermaid)
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:            # Tasklist
+      custom_checkbox: true
+
+
+extra:
+  homepage: https://www.ace-net.ca
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/acenet-canada
+    - icon: fontawesome/brands/x-twitter 
+      link: https://www.twitter.com/computeatlantic
+
+extra_css:
+    # KaTeX Math:
+  - assets/stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+extra_javascript:
+    # KaTeX Math:
+  - javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js

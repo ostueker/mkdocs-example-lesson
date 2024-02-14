@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Add scripts that need to run before here -->
+<p>before super()</p>
+{{ super() }}
+<p>after super()</p>
+<!-- Add scripts that need to run afterwards here -->
+{% endblock %}
