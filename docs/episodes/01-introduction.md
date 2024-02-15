@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: 'Introduction'
 teaching: 0
 exercises: 0
 questions:
@@ -8,11 +8,12 @@ objectives:
 - "First learning objective. (FIXME)"
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
+template: "episode.html"
 ---
 
 In laborum commodo anim deserunt amet nulla ipsum ipsum anim tempor commodo amet non nostrud. Quis ipsum consectetur amet nisi reprehenderit aliquip excepteur eiusmod nulla laboris. Labore nisi deserunt dolor consequat amet magna tempor aliqua mollit quis laborum qui irure consequat. Minim in mollit pariatur culpa laborum reprehenderit aute ut laborum laborum ad veniam duis adipisicing. Adipisicing esse irure exercitation ad quis aliqua fugiat ex esse est culpa exercitation. [@vermeyden2023]
 
-```python title="Python"
+```python
 import numpy as np
 import pandas as pd
 ```
@@ -25,12 +26,11 @@ $$
 
 In laborum commodo anim deserunt amet nulla ipsum ipsum anim tempor commodo amet non nostrud. Quis ipsum consectetur amet nisi reprehenderit aliquip excepteur eiusmod nulla laboris. Labore nisi deserunt dolor consequat amet magna tempor aliqua mollit quis laborum qui irure consequat. Minim in mollit pariatur culpa laborum reprehenderit aute ut laborum laborum ad veniam duis adipisicing. Adipisicing esse irure exercitation ad quis aliqua fugiat ex esse est culpa exercitation. [@Wilson2014;@Wilson2016]
 
-```bash title="Shell"
+```bash
 ls -a
 ```
-```title="Output"
+```{.text .output}
 ./   ../   .bashrc
 ```
 
-{% include links.md %}
 

@@ -14,4 +14,5 @@ keypoints:
 - "The site's configuration is stored in mkdocs.yml."
 - "Each page's configuration is stored at the top of that page."
 # - "Groups of files are stored in collection directories whose names begin with an underscore."
+template: "episode.html"
 ---

@@ -1,0 +1,17 @@
+{# Display key points for an episode. #}
+
+{% if page.meta.keypoints is undefined %}
+{% set episode_keypoints = config.messages.episode_keypoints %}
+{% else %}
+{% set episode_keypoints = page.meta.keypoints %}
+{% endif %}
+
+<div class="admonition keypoints">
+  <p class="admonition-title">Key Points<a class="headerlink" href="#keypoints" title="Anchor link to Key Points">¶</a>
+  </p>
+  <ul>
+    {% for keypoint in page.meta.keypoints %}
+    <li><span markdown>{{ keypoint | markdown }}</span></li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Add scripts that need to run before here -->
-<p>before super()</p>
+{% include 'partials/episode_overview.html' %}
+
 {{ super() }}
-<p>after super()</p>
-<!-- Add scripts that need to run afterwards here -->
+
+{% include 'partials/episode_keypoints.html' %}
 {% endblock %}

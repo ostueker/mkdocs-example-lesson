@@ -12,4 +12,5 @@ keypoints:
 - "The README, authors' list, and citation instructions must be updated for each lesson."
 - "The home page, reference guide, setup instructions, discussion page, and instructors' guide must be updated for each lesson."
 # - "The Makefile stores commonly-used commands."
+template: "episode.html"
 ---

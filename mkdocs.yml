@@ -1,6 +1,9 @@
 ---
-site_name: Test lesson
+site_name: MkDocs Example Lesson
 copyright: Copyright &copy; 2020 - 2024 ACENET
+
+repo_url: https://github.com/ostueker/mkdocs-example-lesson
+edit_uri: blob/main/docs/
 
 # nav:
 #   - Home: 'index.md'
@@ -43,11 +46,11 @@ theme:
     - navigation.expand         # Navigation expansion https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
     - navigation.footer         # Footer Navigation
     - navigation.header         # 
-    - navigation.instant        # Instant loading (without fully reloading the page)
     - navigation.tabs           # Navigation tabs
     - navigation.tracking       # Anchor tracking
     - toc.follow                # Anchor following
     - toc.integrate             # Navigation integration
+    # Note: feature "navigation.instant" messes up rendering of KaTeX Math
 
   
 plugins:
@@ -55,6 +58,7 @@ plugins:
   - bibtex:
       bib_file: "references.bib"
       csl_file: "csl/plos-one.csl"
+  - markdown-filter
   - search
 
 markdown_extensions:
@@ -104,3 +108,13 @@ extra_javascript:
   - javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+messages:
+  episode_keypoints: 
+    - "FIXME: add keypoints to this episode."
+  teaching_time:      "(FIXME)"
+  exercise_time:      "(FIXME)"
+  episode_questions:  
+    - "Add questions to this episode (FIXME)"
+  episode_objectives: 
+    - "Add objectives to this episode (FIXME)"

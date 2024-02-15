@@ -16,6 +16,7 @@ keypoints:
 - "Code blocks can have the source, regular output, or error class."
 - "Special sections are formatted as blockquotes that open with a level-2 header and close with a class identifier."
 - "Special sections may be callouts or challenges; other styles are used by the template itself."
+template: "episode.html"
 ---
 
 A lesson consists of one or more episodes,
@@ -309,7 +310,7 @@ in the MkDocs-Material Reference manual on how to use them.
 
 ## Callouts (Admonitions)
 
-Callouts (which mkdocks-material called Admonitions) can be used to create 
+Callouts (which mkdocs-material called Admonitions) can be used to create 
 formatted boxes around special content like notes, challenges, checkpoints,
 to have them stand out optically.
 

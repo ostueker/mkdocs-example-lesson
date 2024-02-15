@@ -1,0 +1,74 @@
+{# 
+    Display episode's timings and learning objectives.
+
+    Regarding the `if page.*** == nil` below:
+    all-in-one page combines all episodes into one.
+    It, therefore, does not define its own objectives, exercises,
+    and questions, which 'normal' episodes define in the front matter.
+
+    To display episodes' teaching and exercise times, as well as episode
+    questions and objectives, we pass them as parameters to the Liquid's
+    `include` statement when we generate the page:
+
+	 include episode_overview.html teaching_time=e.teaching ...
+
+    Here we obtain the information we need either from the episode itself or
+    from the parameters passed in.
+#}
+
+{% if page.meta.teaching is undefined %}
+{% set teaching_time = config.messages.teaching_time %}
+{% else %}
+{% set teaching_time = page.meta.teaching %}
+{% endif %}
+
+{% if page.meta.exercises is undefined %}
+{% set exercise_time = config.messages.exercise_time %}
+{% else %}
+{% set exercise_time = page.meta.exercises %}
+{% endif %}
+
+{% if page.meta.questions is undefined %}
+{% set episode_questions = config.messages.episode_questions %}
+{% else %}
+{% set episode_questions = page.meta.questions %}
+{% endif %}
+
+{% if page.meta.objectives is undefined %}
+{% set episode_objectives = config.messages.episode_objectives %}
+{% else %}
+{% set episode_objectives = page.meta.objectives %}
+{% endif %}
+
+
+<div class="admonition objectives">
+  <p class="admonition-title">Overview<a class="headerlink" href="#overview" title="Anchor link to Overview">¶</a>
+  </p>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> {{ teaching_time }} min
+      <br />
+      <strong>Exercises:</strong> {{ exercise_time }} min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+        {% for question in episode_questions %}
+        <li>{{ question }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+        {% for objective in episode_objectives %}
+        <li>{{ objective }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+</div>

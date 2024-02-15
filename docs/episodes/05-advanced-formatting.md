@@ -4,6 +4,7 @@ teaching: 10
 exercises: 0
 questions:
 - "What formatting options are available that go beyond those of the 'Carpentries' framework?"
+template: "episode.html"
 ---
 
 ## Mathematical Equations
