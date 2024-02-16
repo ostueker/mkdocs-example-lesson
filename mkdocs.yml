@@ -2,6 +2,8 @@
 site_name: MkDocs Example Lesson
 copyright: Copyright &copy; 2020 - 2024 ACENET
 
+start_time: 540
+
 repo_url: https://github.com/ostueker/mkdocs-example-lesson
 edit_uri: blob/main/docs/
 
@@ -21,6 +23,14 @@ edit_uri: blob/main/docs/
 #     - Discussion:       'extras/discussion.md'
 #     - Instructor Notes: 'extras/guide.md'
 #   - Licenses: 'LICENSE.md'
+
+extra:
+  homepage: https://www.ace-net.ca
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/acenet-canada
+    - icon: fontawesome/brands/x-twitter 
+      link: https://www.twitter.com/computeatlantic
 
 theme:
   name: material
@@ -42,15 +52,16 @@ theme:
   features:
     # - content.code.copy # add copy button to all code cells
     - announce.dismiss          # Announcement bar: Mark as read
+    - content.action.view       # code actions
     - header.autohide           # Automatic hiding the header
     - navigation.expand         # Navigation expansion https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
     - navigation.footer         # Footer Navigation
-    - navigation.header         # 
+    # - navigation.header         # 
+    # Note: feature "navigation.instant" messes up rendering of KaTeX Math
     - navigation.tabs           # Navigation tabs
     - navigation.tracking       # Anchor tracking
     - toc.follow                # Anchor following
     - toc.integrate             # Navigation integration
-    # Note: feature "navigation.instant" messes up rendering of KaTeX Math
 
   
 plugins:
@@ -90,17 +101,11 @@ markdown_extensions:
       custom_checkbox: true
 
 
-extra:
-  homepage: https://www.ace-net.ca
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/acenet-canada
-    - icon: fontawesome/brands/x-twitter 
-      link: https://www.twitter.com/computeatlantic
 
 extra_css:
     # KaTeX Math:
   - assets/stylesheets/extra.css
+  - assets/stylesheets/bootstrap-grid.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
 extra_javascript:

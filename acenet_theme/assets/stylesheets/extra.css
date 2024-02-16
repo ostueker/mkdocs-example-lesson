@@ -53,9 +53,13 @@
     
 }
 
+.md-header__button.md-logo {
+    margin: 0.0rem;
+    padding: 0.1rem;
+}
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-    height: 3rem;
+    height: 4rem;
     width: auto;
 }
 
@@ -304,38 +308,13 @@ div.vmd             { color: var(--vmd-fg-color);     border-color: var(--vmd-fg
         mask-image: var(--md-admonition-icon--caution);
     }
 
-.row{
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.row:before,
-.row:after {
-    display: table;
-    content: " ";
-}
-.row:after{
-    clear: both;
-}
-.col-md-3,
-.col-md-9 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-@media (min-width: 992px) {
-    .col-md-3, .col-md-9 {
-        float: left;
-    }
-    .col-md-9 { 
-        width: 75%; 
-    }
-    .col-md-3 {
-        width: 25%;
-    }
-}
+
 
 .admonition  ul {
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+}
+table tr td p {
     margin-top: 0.1em;
     margin-bottom: 0.5em;
 }
