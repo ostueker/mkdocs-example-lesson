@@ -1,9 +1,10 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
+
+{% block episode_overview %}
+{% include 'partials/episode_overview.html' %}
+{% endblock%}
 
 {% block content %}
-{% include 'partials/episode_overview.html' %}
-
 {{ super() }}
-
 {% include 'partials/episode_keypoints.html' %}
 {% endblock %}
