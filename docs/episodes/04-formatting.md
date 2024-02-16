@@ -10,7 +10,7 @@ objectives:
 - "Explain why blockquotes are used to format parts of episodes."
 - "Explain the use of code blocks in episodes."
 keypoints:
-- "Lesson episodes are stored in _episodes/dd-subject.md."
+- "Lesson episodes are stored in `docs/episodes/dd-subject.md`."
 - "Each episode's title must include a title, time estimates, motivating questions, lesson objectives, and key points."
 - "Episodes should not use sub-titles or HTML layout."
 - "Code blocks can have the source, regular output, or error class."
@@ -114,16 +114,16 @@ Authors should *not* use:
     unique ID (the rules of the ID generation are given in kramdown
     [documentation](https://kramdown.gettalong.org/converter/html.html#auto-ids),
     but it is easier to look for them directly in the page sources).
-    These IDs can be used to easily link to the section by attaching the hash (`#`) followed by the ID
-    to the page's URL (like [this](#linking-section-ids)). For example, the instructor might copy the
-    link to the etherpad, so that the lesson opens in learners' web browser directly at the right
-    spot.
+    These IDs can be used to easily link to the section by attaching the hash (`#`) followed by the
+    ID to the page's URL (like [this](#linking-section-ids)). For example, the instructor might copy
+    the link to the etherpad, so that the lesson opens in learners' web browser directly at the
+    right spot.
 
 
 ## Formatting Code
 
 Inline code fragments are formatted using backticks (`` ` ``).  
-Longer code blocks are formatted by opening and closing the block with `` ``` `` (three backticks) :
+Longer code blocks are formatted by opening and closing the block with `` ``` `` (three backticks):
 
 ````{.text .raw}
 ```
@@ -138,7 +138,8 @@ for thing in collection:
     do_something
 ```
 
-The three backticks can be followed by the name of a language (e.g. `python`) for syntax highlighting:
+The three backticks can be followed by the name of a language (e.g. `python`) 
+for syntax highlighting:
 ````{.text .raw}
 ```python
 for thing in collection:
@@ -271,7 +272,8 @@ All languages that are recognized and will show the name of the language in the 
     MkDocs supports syntax highlighting for a long list of programming languages.
     Syntax highlighting is provided by the [Pygments](https://pygments.org/) library
     and a full list of supported languages can be found [here](https://pygments.org/languages/).  
-    To use syntax highlighting, just put the short-name for the language directly after the opening block.
+    To use syntax highlighting, just put the short-name for the language directly after the 
+    opening block.
 
     For example,
    
@@ -457,5 +459,3 @@ You can add a drop shadow effect to images by applying the
 ![image alt text](path/to/image/source.svg){: .image-with-shadow }
 ```
 
-
-{% include links.md %}
