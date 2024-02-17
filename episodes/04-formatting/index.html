@@ -1,0 +1,1641 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../03-organization/">
+      
+      
+        <link rel="next" href="../05-advanced-formatting/">
+      
+      
+      <link rel="icon" href="../../favicons/favicon-16x16.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Formatting - MkDocs Example Lesson</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/bootstrap-grid.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="acenet" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#maximum-line-length" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.ace-net.ca" title="MkDocs Example Lesson" class="md-header__button md-logo" aria-label="MkDocs Example Lesson" data-md-component="logo">
+      
+  <img src="../../img/an-logo_nametag_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MkDocs Example Lesson
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Formatting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="acenet" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ostueker/mkdocs-example-lesson" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Code_of_Conduct/" class="md-tabs__link">
+        
+  
+    
+  
+  Code of Conduct
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../LICENSE/" class="md-tabs__link">
+        
+  
+    
+  
+  Licenses
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-design/" class="md-tabs__link">
+          
+  
+  Episodes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../extras/about/" class="md-tabs__link">
+          
+  
+  Extras
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.ace-net.ca" title="MkDocs Example Lesson" class="md-nav__button md-logo" aria-label="MkDocs Example Lesson" data-md-component="logo">
+      
+  <img src="../../img/an-logo_nametag_white.png" alt="logo">
+
+    </a>
+    MkDocs Example Lesson
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ostueker/mkdocs-example-lesson" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Code_of_Conduct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licenses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Episodes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Episodes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-tooling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub, Markdown, and MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Formatting
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Formatting
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maximum-line-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Line Length
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locations-and-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locations and Names
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#episode-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Episode Header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#episode-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Episode Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatting Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatting Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Program Output:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Warning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax-highlighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax Highlighting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-code-block-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Code Block Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callouts-admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Callouts (Admonitions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-a-shadow-to-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying a Shadow to Images
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-advanced-formatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Formatting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-checking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checking and Previewing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-break/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Section Break
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Extras
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliography
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/discussion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discussion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/ostueker/mkdocs-example-lesson/raw/main/docs/episodes/04-formatting.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+  <h1>Formatting</h1>
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="admonition objectives">
+  <p class="admonition-title">Overview<a class="headerlink" href="#overview" title="Anchor link to Overview">¶</a>
+  </p>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 10 min
+      <br />
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+        
+        <li><p>How are The lessons formatted?</p></li>
+        
+      </ul>
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+        
+        <li><p>Explain the header of each episode.</p></li>
+        
+        <li><p>Explain the overall structure of each episode.</p></li>
+        
+        <li><p>Explain why blockquotes are used to format parts of episodes.</p></li>
+        
+        <li><p>Explain the use of code blocks in episodes.</p></li>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+                  <p>A lesson consists of one or more episodes,
+each of which has:</p>
+<ul>
+<li>a [YAML][yaml] header containing required values</li>
+<li>some teachable content</li>
+<li>some exercises</li>
+</ul>
+<p>The diagram below shows the internal structure of a single episode file
+(click on the image to see a larger version):</p>
+<!-- 
+<a href="{{ page.root }}/fig/episode-format.png">
+  <img src="{{ page.root }}/fig/episode-format-small.png" alt="Formatting Rules" />
+</a>
+ -->
+<h2 id="maximum-line-length">Maximum Line Length<a class="headerlink" href="#maximum-line-length" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Limit all lines to a maximum of 100 characters.
+<code>bin/lesson_check.py</code> will report lines longer than 100 characters
+and this can block your contributions of being accepted.</p>
+<p>The two reasons behind the decision to enforce a maximum line length are
+(1) make diff and merge easier in the command line and other user interfaces
+and
+(2) make update of translation of the lessons easier.</p>
+<h2 id="locations-and-names">Locations and Names<a class="headerlink" href="#locations-and-names" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Episode files are stored in <code>_episodes</code>
+or, for the case of R Markdown files, <code>_episodes_rmd</code>
+so that [Jekyll][jekyll] will create a [collection][jekyll-collection] for them.
+Episodes are named <code>dd-subject.md</code>,
+where <code>dd</code> is a two-digit sequence number (with a leading 0)
+and <code>subject</code> is a one- or two-word identifier.
+For example,
+the first three episodes of this example lesson are
+<code>_episodes/01-design.md</code>,
+<code>_episodes/02-tooling.md</code>
+and <code>_episodes/03-formatting.md</code>.
+These become <code>/01-design/index.html</code>, <code>/02-tooling/index.html</code>, and <code>/03-formatting/index.html</code>
+in the published site.
+When referring to other episodes, use:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    [link text]({{ page.root }}{% link _episodes/dd-subject.md %})
+</span></code></pre></div>
+<p><em>i.e.</em>, use [Jekyll's link tag][jekyll-link-tag] and the name of the file.</p>
+<h2 id="episode-header">Episode Header<a class="headerlink" href="#episode-header" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Each episode's [YAML][yaml] header must contain:</p>
+<ul>
+<li>the episode's title</li>
+<li>time estimates for teaching and exercises</li>
+<li>motivating questions</li>
+<li>lesson objectives</li>
+<li>a summary of key points</li>
+</ul>
+<p>These values are stored in the header so that [Jekyll][jekyll] will read them
+and make them accessible in other pages as <code>site.episodes.the_episode.key</code>,
+where <code>the_episode</code> is the particular episode
+and <code>key</code> is the key in the [YAML][yaml] header.
+This lets us do things like
+list each episode's key questions in the syllabus on the lesson home page.</p>
+<h2 id="episode-structure">Episode Structure<a class="headerlink" href="#episode-structure" title="Anchor link to this section for reference">&para;</a></h2>
+<p>The episode layout template in <code>_layouts/episode.html</code> automatically creates
+an introductory block that summarizes the lesson's teaching time,
+exercise time,
+key questions,
+and objectives.
+It also automatically creates a closing block that lists its key points.
+In between,
+authors should use only:</p>
+<ul>
+<li>paragraphs</li>
+<li>images</li>
+<li>tables</li>
+<li>ordered and unordered lists</li>
+<li>code samples (described below).</li>
+<li>special blockquotes (described below)</li>
+</ul>
+<p>Authors should <em>not</em> use:</p>
+<ul>
+<li>sub-titles (instead, use H2 subheadings (<code>##</code>) in the episode files)</li>
+<li>HTML layout (e.g., <code>div</code> elements).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Linking section IDs</p>
+<p>In the HTML output each header of a section, code sample, exercise will be associated with an
+unique ID (the rules of the ID generation are given in kramdown
+<a href="https://kramdown.gettalong.org/converter/html.html#auto-ids">documentation</a>,
+but it is easier to look for them directly in the page sources).
+These IDs can be used to easily link to the section by attaching the hash (<code>#</code>) followed by the
+ID to the page's URL (like <a href="#linking-section-ids">this</a>). For example, the instructor might copy
+the link to the etherpad, so that the lesson opens in learners' web browser directly at the
+right spot.</p>
+</div>
+<h2 id="formatting-code">Formatting Code<a class="headerlink" href="#formatting-code" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Inline code fragments are formatted using backticks (<code>`</code>).<br />
+Longer code blocks are formatted by opening and closing the block with <code>```</code> (three backticks):</p>
+<div class="language-text raw highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>```
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>for thing in collection:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    do_something
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>```
+</span></code></pre></div>
+<p>which is rendered as:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>for thing in collection:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    do_something
+</span></code></pre></div></p>
+<p>The three backticks can be followed by the name of a language (e.g. <code>python</code>) 
+for syntax highlighting:
+<div class="language-text raw highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>```python
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>for thing in collection:
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    do_something
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>```
+</span></code></pre></div>
+which is rendered as:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">do_something</span>
+</span></code></pre></div></p>
+<p>Or they can be followed by an expression in braces, where the first denotes the language and the 
+second a class for additional formatting:</p>
+<div class="language-text raw highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>```{.text .class}
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Language: `text` (no highlighting) and class `.class`
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>```
+</span></code></pre></div>
+<p>The <a href="{{ site.template_repo }}">template</a> provides three styles for code blocks:</p>
+<h4 id="program-output">Program Output:<a class="headerlink" href="#program-output" title="Anchor link to this section for reference">&para;</a></h4>
+<p>With class <code>.output</code>, this code ...
+<div class="language-text raw highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>```{.text .output}
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>{.text .output}: program output.
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>```
+</span></code></pre></div>
+will be shown as:
+<div class="language-text output highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{.text .output}: program output.
+</span></code></pre></div></p>
+<h4 id="error">Error<a class="headerlink" href="#error" title="Anchor link to this section for reference">&para;</a></h4>
+<p>With class <code>.error</code>, this code ...
+<div class="language-text raw highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>```{.text .error}
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>{.text .error}: error messages.
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>```
+</span></code></pre></div>
+will be shown as:
+<div class="language-text error highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>{.text .error}: error messages.
+</span></code></pre></div></p>
+<h4 id="warning">Warning<a class="headerlink" href="#warning" title="Anchor link to this section for reference">&para;</a></h4>
+<p>With class <code>.warning</code>, this code ...
+<div class="language-text raw highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>```{.text .warning}
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>{.text .error}: warning messages.
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>```
+</span></code></pre></div>
+will be shown as:
+<div class="language-text warning highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>{.text .warning}: warning messages.
+</span></code></pre></div></p>
+<h3 id="syntax-highlighting">Syntax Highlighting<a class="headerlink" href="#syntax-highlighting" title="Anchor link to this section for reference">&para;</a></h3>
+<p>The following styles like <code>.source</code>, but include syntax highlighting for the
+specified language.
+Please use them where possible to indicate the type of source being displayed,
+and to make code easier to read.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><code>bash</code>: Bash commands:
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>console</code>:   Shell command with prompt and output:
+  <div class="language-console highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">$ </span>ls
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="go">Desktop     Downloads   Movies      Pictures</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="go">Documents   Library     Music       Public</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>html</code>: HTML source:
+  <div class="language-html highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>make</code>: Makefiles:
+  <div class="language-make highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nf">all</span><span class="o">:</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span>g++<span class="w"> </span>main.cpp<span class="w"> </span>hello.cpp<span class="w"> </span>-o<span class="w"> </span>hello
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>matlab</code>: MATLAB source:
+  <div class="language-matlab highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Hello, world!&#39;</span><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>python</code>: Python source:
+  <div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>r</code>: R source:
+  <div class="language-r highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nf">cat</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>sql</code>: SQL source:
+  <div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">PRINT</span><span class="w"> </span><span class="s1">&#39;Hello, world!&#39;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">RETURN</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+</div>
+<p>All languages that are recognized and will show the name of the language in the tile are:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td>Chapel</td>
+<td>D</td>
+<td>Java</td>
+<td>Make</td>
+<td>Python</td>
+<td>Scala</td>
+</tr>
+<tr>
+<td>Bash</td>
+<td>CMake</td>
+<td>Fortran</td>
+<td>Julia</td>
+<td>MATLAB</td>
+<td>R</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Console</td>
+<td>Go</td>
+<td>Kotlin</td>
+<td>OpenCL</td>
+<td>Ruby</td>
+<td>TCL</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>Cuda</td>
+<td>HTML</td>
+<td>Lua</td>
+<td>Perl</td>
+<td>Rust</td>
+<td>Vulkan</td>
+</tr>
+</tbody>
+</table>
+<details class="solution">
+<summary>Highlighting for other languages</summary>
+<p>MkDocs supports syntax highlighting for a long list of programming languages.
+Syntax highlighting is provided by the <a href="https://pygments.org/">Pygments</a> library
+and a full list of supported languages can be found <a href="https://pygments.org/languages/">here</a>.<br />
+To use syntax highlighting, just put the short-name for the language directly after the 
+opening block.</p>
+<p>For example,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>   ```yaml
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>   title: &quot;YAML Highlighting Example&quot;
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>   description: &quot;This is an example of syntax highlighting for YAML.&quot;
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>   array_values:
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>       - value_1
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>       - value_2
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>   ```
+</span></code></pre></div>
+<p>will produce this:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YAML</span><span class="nv"> </span><span class="s">Highlighting</span><span class="nv"> </span><span class="s">Example&quot;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">syntax</span><span class="nv"> </span><span class="s">highlighting</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">YAML.&quot;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nt">array_values</span><span class="p">:</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_1</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value_2</span>
+</span></code></pre></div>
+</details>
+<h3 id="advanced-code-block-features">Advanced Code Block Features<a class="headerlink" href="#advanced-code-block-features" title="Anchor link to this section for reference">&para;</a></h3>
+<p>MkDocs-Material supports a variety of additional features for code-blocks, such as:</p>
+<ul>
+<li>adding a title (e.g. for a filename)</li>
+<li>adding annotations</li>
+<li>adding line numbers</li>
+<li>highlighting specific lines</li>
+<li>highlighting inline code blocks </li>
+</ul>
+<p>Please refer to the page on 
+<a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#usage">Code Blocks</a> 
+in the MkDocs-Material Reference manual on how to use them.</p>
+<h2 id="callouts-admonitions">Callouts (Admonitions)<a class="headerlink" href="#callouts-admonitions" title="Anchor link to this section for reference">&para;</a></h2>
+<p>Callouts (which mkdocs-material called Admonitions) can be used to create 
+formatted boxes around special content like notes, challenges, checkpoints,
+to have them stand out optically.</p>
+<p>The callout it initiated by beginning a line with three exclamation marks <code>!!!</code> 
+followed by a space and the callout type (e.g. <code>note</code>) and optionally a title.
+If no title is given, The capitalized type is used as a the title.<br />
+This is followed by lines that are indented with four spaces, to be align
+vertically with callout type.<br />
+The content of the callout-box ends, once text resumes vertically aligned
+with the exclamation marks.</p>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>!!! note &quot;Callout Title&quot;
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    text
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    text
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    text
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>    ```
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>    code
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>    ```
+</span></code></pre></div>
+<p>This is rendered as:</p>
+<div class="admonition callout">
+<p class="admonition-title">Callout Title</p>
+<p>text
+text
+text</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>code
+</span></code></pre></div>
+</div>
+<p>If three question-marks (<code>???</code>) are used to create a Collapsible callout 
+which is used with solutions for exercises:</p>
+<div class="language-text raw highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>??? solution
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    Exercise solution.  
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    Start callout-block with `???` instead of `!!!` to hide the answer on load.
+</span></code></pre></div>
+<details class="solution">
+<summary>Solution</summary>
+<p>Exercise solution.<br />
+Start callout-block with <code>???</code> instead of <code>!!!</code> to hide the answer on load.</p>
+</details>
+<p>The <a href="{{ site.template_repo }}">lesson template</a> defines styles
+for the following special callouts:</p>
+<div class="grid cards">
+<ul>
+<li>
+<div class="admonition callout">
+<p class="admonition-title">Tag <code>callout</code></p>
+  An aside or other comment.</div>
+</li>
+<li>
+<div class="admonition objectives">
+<p class="admonition-title">Objectives</p>
+  Episode objectives</div>
+</li>
+<li>
+<div class="admonition challenge">
+<p class="admonition-title">Challenge</p>
+  An exercise.</div>
+</li>
+<li>
+<div class="admonition prereq">
+<p class="admonition-title">Prereq</p>
+  Prerequisites.</div>
+</li>
+<li>
+<div class="admonition checklist">
+<p class="admonition-title">Checklist</p>
+  Checklists.</div>
+</li>
+<li>
+<details class="solution">
+<summary>Solution</summary>
+  Exercise solution.<br />
+  Start callout-block with <code>???</code> instead of <code>!!!</code> to hide the answer on load.</details>
+</li>
+<li>
+<div class="admonition discussion">
+<p class="admonition-title">Discussion</p>
+  Discussion questions.</div>
+</li>
+<li>
+<div class="admonition testimonial">
+<p class="admonition-title">Testimonial</p>
+  A laudatory quote from a user.</div>
+</li>
+<li>
+<div class="admonition keypoints">
+<p class="admonition-title">Keypoints</p>
+  Key points of an episode.</div>
+</li>
+<li>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+  A Warning.</div>
+</li>
+</ul>
+</div>
+<p>Note that <code>challenge</code> and <code>discussion</code> have the same color but different icons.</p>
+<p>Most authors will only use <code>callout</code>, <code>challenge</code>, and <code>prereq</code>,
+as the others are automatically generated by the template.
+Note that <code>prereq</code> is meant for describing things
+that learners should know before starting this lesson;
+setup instructions do not have a particular style,
+but are instead put on the <code>docs/setup.md</code> page.</p>
+<p>Note also that solutions are nested inside exercises as shown below:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>!!! challenge &quot;Challenge Title&quot;
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    This is the body of the challenge.
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    ```
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    it may include some code
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>    ```
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>    ??? solution &quot;Solution&quot;
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>        This is the body of the solution.
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>        ```
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>        it may also include some code
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>        ```
+</span></code></pre></div>
+<div class="admonition challenge">
+<p class="admonition-title">Challenge Title</p>
+<p>This is the body of the challenge.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>it may include some code
+</span></code></pre></div>
+<details class="solution">
+<summary>Solution</summary>
+<p>This is the body of the solution.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>it may also include some code
+</span></code></pre></div>
+</details>
+</div>
+<p>The double indentation is annoying to edit,
+but the alternatives we considered and discarded are worse:</p>
+<ol>
+<li>
+<p>Use HTML <code>&lt;div&gt;</code> elements for the challenges.
+    Most people dislike mixing HTML and Markdown,
+    and experience shows that it's all too easy to confuse Markdown parsers.</p>
+</li>
+<li>
+<p>Put solutions immediately after challenges rather than inside them.
+    This is simpler to edit,
+    but clutters up the page
+    and makes it harder for tools to tell which solutions belong to which exercises.</p>
+</li>
+</ol>
+<h2 id="applying-a-shadow-to-images">Applying a Shadow to Images<a class="headerlink" href="#applying-a-shadow-to-images" title="Anchor link to this section for reference">&para;</a></h2>
+<p>By default, images in the lesson are displayed without borders or shadows.
+In some circumstances, it may be desirable to make images stand out
+from the background of the page,
+for example, when using screenshots that include text on white background.
+You can add a drop shadow effect to images by applying the
+<code>image-with-shadow</code> class to them:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>![image alt text](path/to/image/source.svg){: .image-with-shadow }
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+
+
+
+
+
+<div class="admonition keypoints">
+  <p class="admonition-title">Key Points<a class="headerlink" href="#keypoints" title="Anchor link to Key Points">¶</a>
+  </p>
+  <ul>
+    
+    <li><span markdown><p>Lesson episodes are stored in <code>docs/episodes/dd-subject.md</code>.</p></span></li>
+    
+    <li><span markdown><p>Each episode's title must include a title, time estimates, motivating questions, lesson objectives, and key points.</p></span></li>
+    
+    <li><span markdown><p>Episodes should not use sub-titles or HTML layout.</p></span></li>
+    
+    <li><span markdown><p>Code blocks can have the source, regular output, or error class.</p></span></li>
+    
+    <li><span markdown><p>Special sections are formatted as blockquotes that open with a level-2 header and close with a class identifier.</p></span></li>
+    
+    <li><span markdown><p>Special sections may be callouts or challenges; other styles are used by the template itself.</p></span></li>
+    
+  </ul>
+</div>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03-organization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lesson Organization">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lesson Organization
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-advanced-formatting/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced Formatting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Advanced Formatting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020 - 2024 ACENET
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/acenet-canada" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.twitter.com/computeatlantic" target="_blank" rel="noopener" title="www.twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.view", "header.autohide", "navigation.expand", "navigation.footer", "navigation.tabs", "navigation.tracking", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
