@@ -67,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="acenet" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -111,26 +111,37 @@
       </div>
     </div>
     
+    
       
         <form class="md-header__option" data-md-component="palette">
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="acenet" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2C5.13 2 2 5.13 2 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7M6 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H6v1m13-8h-2l-3.2 9h1.9l.7-2h3.2l.7 2h1.9L19 13m-2.15 5.65L18 15l1.15 3.65h-2.3Z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="acenet" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
       </label>
     
   
@@ -178,19 +189,6 @@
     </div>
   </div>
 </div>
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/ostueker/mkdocs-example-lesson" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
     
   </nav>
   
@@ -321,485 +319,7 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
 
-
-  
-
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="https://www.ace-net.ca" title="MkDocs Example Lesson" class="md-nav__button md-logo" aria-label="MkDocs Example Lesson" data-md-component="logo">
-      
-  <img src="img/an-logo_nametag_white.png" alt="logo">
-
-    </a>
-    MkDocs Example Lesson
-  </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/ostueker/mkdocs-example-lesson" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Code_of_Conduct/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Code of Conduct
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="LICENSE/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Licenses
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="setup/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Episodes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Episodes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/01-design/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lesson Design
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/02-tooling/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GitHub, Markdown, and MkDocs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/03-organization/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lesson Organization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/04-formatting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Formatting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/05-advanced-formatting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Advanced Formatting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/07-checking/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Checking and Previewing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/08-break/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Section Break
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="episodes/09-introduction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Extras
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Extras
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="extras/about/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    About
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="extras/bibliography/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bibliography
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="extras/discussion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Discussion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="extras/guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Guide
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-          
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
@@ -828,7 +348,7 @@
 <p>Features in the Carpentries Style:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Generate Syllabus-table from episodes' metadata<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> deal with multi-day workshops</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> deal with multi-day workshops</li>
 </ul>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> add name of language to code-blocks (CSS <code>::BEFORE</code> )</li>
@@ -864,202 +384,153 @@
 
 
                 
-<hr>
 
-
-
-
-
-
-
-
+<div class="syllabus">
+  <h2 id="schedule">Schedule</h2>
 
   
-
-
-
-
-
   
-
   
+  <table class="table table-striped table-hover" style="border: 1;">
+    <tr>
+      <td class="col-md-1"></td>
+      <td class="col-md-2"></td>
+      <td class="col-md-3"><a href="/setup">Setup</a></td>
+      <td class="col-md-7">Download files required for the lesson</td>
+    </tr>
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-<table class="table table-striped table-hover" style="border: 1;">
-  <tr>
     
-    <td class="col-md-2"></td>
-    <td class="col-md-3"><a href="/setup">Setup</a></td>
-    <td class="col-md-7">Download files required for the lesson</td>
-  </tr>
-
-
-  <tr>
-    
-    <td class="col-md-2">
-      09:00
-    </td>
-    <td class="col-md-3"><a href="episodes/01-design/">Lesson Design</a></td>
-    <td class="col-md-7">
+    <tr>
+      <td class="col-md-1">Day 1</td><td class="col-md-1">
+        09:00
+      </td>
+      <td class="col-md-3">1. <a href="episodes/01-design/">Lesson Design</a></td>
+      <td class="col-md-7"><p>How do we design lessons?</p></td>
+      </tr>
       
-        
-          <p>How do we design lessons?</p>
-        
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:05
+      </td>
+      <td class="col-md-3">2. <a href="episodes/02-tooling/">GitHub, Markdown, and MkDocs</a></td>
+      <td class="col-md-7"><p>How are pages published?</p></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-  <tr>
-    
-    <td class="col-md-2">
-      09:05
-    </td>
-    <td class="col-md-3"><a href="episodes/02-tooling/">GitHub, Markdown, and MkDocs</a></td>
-    <td class="col-md-7">
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:15
+      </td>
+      <td class="col-md-3">3. <a href="episodes/03-organization/">Lesson Organization</a></td>
+      <td class="col-md-7"><p>How are the files in a lesson organized?</p></td>
+      </tr>
       
-        
-          <p>How are pages published?</p>
-        
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:25
+      </td>
+      <td class="col-md-3">4. <a href="episodes/04-formatting/">Formatting</a></td>
+      <td class="col-md-7"><p>How are The lessons formatted?</p></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-  <tr>
-    
-    <td class="col-md-2">
-      09:15
-    </td>
-    <td class="col-md-3"><a href="episodes/03-organization/">Lesson Organization</a></td>
-    <td class="col-md-7">
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:35
+      </td>
+      <td class="col-md-3">5. <a href="episodes/05-advanced-formatting/">Advanced Formatting</a></td>
+      <td class="col-md-7"><p>What formatting options are available that go beyond those of the 'Carpentries' framework?</p></td>
+      </tr>
       
-        
-          <p>How are the files in a lesson organized?</p>
-        
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:45
+      </td>
+      <td class="col-md-3">6. <a href="episodes/07-checking/">Checking and Previewing</a></td>
+      <td class="col-md-7"><p>How can lesson formatting be checked?</p><p>How can lessons be previewed?</p></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-  <tr>
-    
-    <td class="col-md-2">
-      09:25
-    </td>
-    <td class="col-md-3"><a href="episodes/04-formatting/">Formatting</a></td>
-    <td class="col-md-7">
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:50
+      </td>
+      <td class="col-md-3">7. <a href="episodes/08-break/">Section Break</a></td>
+      <td class="col-md-7">Break</td>
+      </tr>
       
-        
-          <p>How are The lessons formatted?</p>
-        
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:05
+      </td>
+      <td class="col-md-3">8. <a href="episodes/09-introduction/">Introduction</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-  <tr>
-    
-    <td class="col-md-2">
-      09:35
-    </td>
-    <td class="col-md-3"><a href="episodes/05-advanced-formatting/">Advanced Formatting</a></td>
-    <td class="col-md-7">
       
-        
-          <p>What formatting options are available that go beyond those of the 'Carpentries' framework?</p>
-        
+    <tr><td class="col-md-1"></td><td class="col-md-1">10:25</td>
+      <td class="col-md-3">Finish</td>
+      <td class="col-md-7"></td>
+    </tr><tr>
+      <td class="col-md-1">Day 2</td><td class="col-md-1">
+        09:00
+      </td>
+      <td class="col-md-3">9. <a href="episodes/10-day2-episode1/">Day 2 Episode 1</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-  <tr>
-    
-    <td class="col-md-2">
-      09:45
-    </td>
-    <td class="col-md-3"><a href="episodes/07-checking/">Checking and Previewing</a></td>
-    <td class="col-md-7">
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:20
+      </td>
+      <td class="col-md-3">10. <a href="episodes/11-day2-episode2/">Day 2 Episode 2</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
       
-        
-          <p>How can lesson formatting be checked?</p>
-        
-          <p>How can lessons be previewed?</p>
-        
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:40
+      </td>
+      <td class="col-md-3">11. <a href="episodes/12-day2-episode3/">Day 2 Episode 3</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-  <tr>
-    
-    <td class="col-md-2">
-      09:50
-    </td>
-    <td class="col-md-3"><a href="episodes/08-break/">Section Break</a></td>
-    <td class="col-md-7">
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:00
+      </td>
+      <td class="col-md-3">12. <a href="episodes/13-day2-episode4/">Day 2 Episode 4</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
       
-        Break
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:20
+      </td>
+      <td class="col-md-3">13. <a href="episodes/14-day2-episode5/"></a></td>
+      <td class="col-md-7"></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-  <tr>
-    
-    <td class="col-md-2">
-      10:05
-    </td>
-    <td class="col-md-3"><a href="episodes/09-introduction/">Introduction</a></td>
-    <td class="col-md-7">
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:20
+      </td>
+      <td class="col-md-3">14. <a href="episodes/15-day2-episode6/"></a></td>
+      <td class="col-md-7"></td>
+      </tr>
       
-        
-          <p>Key question (FIXME)</p>
-        
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:20
+      </td>
+      <td class="col-md-3">15. <a href="episodes/16-day2-episode7/"></a></td>
+      <td class="col-md-7"></td>
+      </tr>
       
-    </td>
-  </tr>
-  
-  
-  
-
-
-  <tr>
-    
-    <td class="col-md-2">10:25</td>
-    <td class="col-md-3">Finish</td>
-    <td class="col-md-7"></td>
-  </tr>
+      <tr><td class="col-md-1"></td><td class="col-md-1">10:20</td>
+        <td class="col-md-3">Finish</td>
+        <td class="col-md-7"></td>
+      </tr>
   </table>
 
-
+</div class="syllabus">
 
               </article>
             </div>
@@ -1112,7 +583,7 @@
   
 </div>
       
-        <div class="md-social">
+      <div class="md-social">
   
     
     
@@ -1137,6 +608,19 @@
     </a>
   
 </div>
+      
+      
+      <div class="md-header__source">
+        <a href="https://github.com/ostueker/mkdocs-example-lesson" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
       
     </div>
   </div>
