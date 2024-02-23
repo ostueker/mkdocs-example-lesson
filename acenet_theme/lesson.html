@@ -1,65 +1,93 @@
 {% extends "base.html" %}
 
+{% block site_nav %}
+{% endblock %}
+
 {% block content %}
 {{ super() }}
 <hr>
 
 {# include 'partials/syllabus.html' #}
+<div class="syllabus">
+  <h2 id="schedule">Schedule</h2>
 
 {# initialize variables #}
-{% set lesson_number = 0 %}
-{% set day = 0 %}
-{% set multiday = false %}
-{% set ns = namespace(current=0) %}
-{% if config.start_time %}
-  {% set ns.current = config.start_time %}
-{% endif %}
+{# ==================== #}
+{#- Set some global (namespace) variables: #}
+{%- set ns = namespace(day=0, multiday=False, current=0, lesson_number=0, start=False) -%}
+{%- if config.start_time -%}
+  {%- set ns.current = config.start_time -%}
+{%- endif -%}
 
-{# check whether this is a multiday lesson #}
-
-{% for episode in nav.pages if 'episodes' in episode.url %}
-  {% if episode.meta.stat %}
-    {% set multiday = True %}
-  {% endif %}
-{% endfor %}
+{# ======================================== #}
+{# check whether this is a multi-day lesson #}
+{# ======================================== #}
+{%- for episode in nav.pages if 'episodes' in episode.url -%}
+  {%- if episode.meta.start -%}
+    {%- set ns.multiday = True -%}
+  {%- endif -%}
+{%- endfor -%}
 
 <table class="table table-striped table-hover" style="border: 1;">
   <tr>
-    {% if multiday %}<td class="col-md-1"></td>{% endif %}
+    {% if ns.multiday %}<td class="col-md-1"></td>{% endif %}
     <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}"></td>
     <td class="col-md-3"><a href="/setup">Setup</a></td>
     <td class="col-md-7">Download files required for the lesson</td>
   </tr>
 
-{% for episode in nav.pages if 'episodes' in episode.url %}
+{# Loop over episodes #}
+{# ================== #}
+{%- for episode in nav.pages if 'episodes' in episode.url -%}
+  {%- if episode.meta.start -%}{# Starting a new day? #}
+    {%- set ns.day = ns.day + 1 -%}
+    {%- set ns.start = True -%}
+    {%- if ns.day > 1 -%} {# If about to start day 2 or later, show finishing time for previous day #}
+      <tr>
+        {%- if ns.multiday %}<td class="col-md-1"></td>{% endif -%}
+        <td class="{% if ns.multiday %}col-md-1{% else %}col-md-2{% endif %}">{{ "{:02d}:{:02d}".format(ns.current // 60, ns.current % 60 ) }}</td>
+        <td class="col-md-3">Finish</td>
+        <td class="col-md-7"></td>
+      </tr>
+    {%- endif -%}
+    {%- set ns.current = config.start_time -%}{# Re-set start time of this episode to general daily start time #}
+  {%- endif -%}
+  {%- if ns.day < 1 -%}{# make sure we are in day one if first episode doesn't set "start" #}
+    {%- set ns.day = 1 -%}
+    {%- set ns.start = True -%}
+  {%- endif -%}
+  {%- set ns.lesson_number = ns.lesson_number + 1 -%}
   <tr>
-    {% if multiday %}<td class="col-md-1"></td>{% endif %}
-    <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}">
+    {% if ns.multiday %}<td class="col-md-1">{% if ns.start %}Day {{ ns.day }}{% endif %}</td>{% endif -%}
+    <td class="{% if ns.multiday %}col-md-1{% else %}col-md-2{% endif %}">
       {{ "{:02d}:{:02d}".format(ns.current // 60, ns.current % 60 ) }}
     </td>
-    <td class="col-md-3"><a href="{{ episode.url }}">{{ episode.meta.title }}</a></td>
+    <td class="col-md-3">{{ ns.lesson_number }}. <a href="{{ episode.url }}">{{ episode.meta.title }}</a></td>
     <td class="col-md-7">
-      {% if episode.meta.break %}
+      {%- if episode.meta.break -%}
         Break
-      {% else %}
-        {% for question in episode.meta.questions %}
+      {%- else -%}
+        {%- for question in episode.meta.questions -%}
           {{ question | markdown }}
-        {% endfor %}
-      {% endif %}
+        {%- endfor -%}
+      {%- endif -%}
     </td>
   </tr>
-  {% if episode.meta.teaching  is number %}{% set ns.current = ns.current + episode.meta.teaching  %}{% endif %}
-  {% if episode.meta.exercises is number %}{% set ns.current = ns.current + episode.meta.exercises %}{% endif %}
-  {% if episode.meta.break     is number %}{% set ns.current = ns.current + episode.meta.break     %}{% endif %}
-{% endfor %}
+  {# Calculate start time for next episode #}
+  {# ===================================== #}
+  {%- if episode.meta.teaching  is number %}{% set ns.current = ns.current + episode.meta.teaching  %}{% endif -%}
+  {%- if episode.meta.exercises is number %}{% set ns.current = ns.current + episode.meta.exercises %}{% endif -%}
+  {%- if episode.meta.break     is number %}{% set ns.current = ns.current + episode.meta.break     %}{% endif -%}
+  {%- set ns.start = False -%}
+{%- endfor -%}
 
   <tr>
-    {% if multiday %}<td class="col-md-1"></td>{% endif %}
-    <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}">{{ "{:02d}:{:02d}".format(ns.current // 60, ns.current % 60) }}</td>
+    {%- if ns.multiday %}<td class="col-md-1"></td>{% endif -%}
+    <td class="{% if ns.multiday %}col-md-1{% else %}col-md-2{% endif %}">{{ "{:02d}:{:02d}".format(ns.current // 60, ns.current % 60) }}</td>
     <td class="col-md-3">Finish</td>
     <td class="col-md-7"></td>
   </tr>
   </table>
 
-
+</div class="syllabus">{# class="syllabus" #}
 {% endblock %}

@@ -7,7 +7,7 @@ template: 'lesson.html'
 
     * Features in the Carpentries Style:
         * [x] Generate Syllabus-table from episodes' metadata
-            * [ ] deal with multi-day workshops
+            * [x] deal with multi-day workshops
         * [x] add name of language to code-blocks (CSS `::BEFORE` )
         * [x] add output and error boxes like in [SWC style](https://carpentries.github.io/lesson-example/04-formatting/index.html#formatting-code)
         * [x] add exercise and solution boxes
