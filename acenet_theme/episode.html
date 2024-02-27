@@ -8,3 +8,14 @@
 {{ super() }}
 {% include 'partials/episode_keypoints.html' %}
 {% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+  {% if config.instructor_view_cookie_lifetime %}
+  const cookie_lifetime = {{ config.instructor_view_cookie_lifetime }};
+  {% else %}
+  const cookie_lifetime = 7;
+  {% endif %}
+</script>
+{{ super() }}
+{% endblock %}

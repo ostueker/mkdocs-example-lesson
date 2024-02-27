@@ -17,5 +17,5 @@ template: 'lesson.html'
     * ACENET Customizations
         * [x] scientific references and bibliography
         * [x] LaTeX Math (KaTeX)
-        * [ ] instructor view
+        * [x] instructor view
 

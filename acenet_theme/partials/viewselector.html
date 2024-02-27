@@ -1,0 +1,10 @@
+{# Toggle switch for instructor view. #}
+{# if page.meta.template == "episode.html" #}
+<form class="md-header__option toggle_instructor_view" title="Toggle between learner- and instructor-view" data-toggle="tooltip">
+  <label class="md-header__button switch">
+    <input type="checkbox">
+    <span class="instructor">{% include ".icons/material/human-male-board.svg" %}</span>
+    <span class="learner">{% include ".icons/material/account-school.svg" %}</span>
+  </label>
+</form>
+{# endif #}

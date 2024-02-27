@@ -7,6 +7,9 @@ start_time: 540
 repo_url: https://github.com/ostueker/mkdocs-example-lesson
 edit_uri: blob/main/docs/
 
+instructor_view_enable: true
+instructor_view_cookie_lifetime: 1
+
 # nav:
 #   - Home: 'index.md'
 #   - Code of Conduct: 'Code_of_Conduct.md'
@@ -97,7 +100,11 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.arithmatex:          # Math 
       generic: true
+  - pymdownx.blocks.html          # for `/// html | div` blocks
   - pymdownx.details              # Admonition / Call-outs
+  - pymdownx.emoji:               # emojis
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite         # Code blocks
   - pymdownx.snippets             # Code blocks
   - pymdownx.superfences:         # Admonition / Diagrams / Code blocks
@@ -108,15 +115,18 @@ markdown_extensions:
   - pymdownx.tasklist:            # Tasklist
       custom_checkbox: true
 
-
-
 extra_css:
+    # for Instructor/learner view
+  - assets/stylesheets/instructor_view.css
     # KaTeX Math:
   - assets/stylesheets/extra.css
   - assets/stylesheets/bootstrap-grid.css
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
 extra_javascript:
+    # for Instructor/learner view
+  - assets/javascripts/jquery-3.7.1.slim.min.js
+  - assets/javascripts/instructor_view.js
     # KaTeX Math:
   - javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js

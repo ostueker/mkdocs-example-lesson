@@ -107,6 +107,66 @@ gitGraph
 ```
 
 
+## Instructor View
+
+Some lessons are rather complex and require a lot of information, which can result in long blocks
+of text that are needed for self-study as well as new instructors that need to familiarize
+themselves with the material.  
+In a workshop or presentation setting however it's difficult to pick out the talking points and
+having key information in bullet-points would be much better.
+
+A solution to this is to introduce an "Instructor View" that will hide paragraphs that have been 
+marked as `/// html | div[class="learner"]` and instead show paragraphs marked as `/// html | div[class="instructor"]`, which are otherwise hidden.  
+
+The instructor view can be enabled in the `mkdocs.yml` file with:
+
+```yaml
+instructor_view_enable: true
+```
+
+If enabled, one the following toggle icons will appear in the Navigation bar at the top 
+to indicate which view is active and to toggle between them:
+
+* Learner view active: :material-account-school:
+* Instructor view is active: :material-human-male-board:
+
+The state of the toggle is persistent for some time (by default 7 days) by setting a cookie, 
+however this duration can be customized by a variable in `mkdocs.yml`:
+
+```yaml
+instructor_view_cookie_lifetime: 3
+```
+
+**Example**:
+
+````text
+/// html | div[class="learner"]
+This is a long text that describes a complex topic in detail. 
+This contains information that the instructor explains in detail.   
+_Lorem ipsum dolor sit amet,[...] sunt in culpa qui officia deserunt mollit anim id est laborum._
+///
+
+/// html | div[class="instructor"]
+* talking points for instructor
+* easier to read during the workshop
+///
+````
+
+Will be shown as:
+
+/// html | div[class="learner"]
+This is a long text that describes a complex topic in detail.
+This contains information that the instructor explains in detail.   
+_Lorem ipsum dolor sit amet,[...] sunt in culpa qui officia deserunt mollit anim id est laborum._
+///
+
+/// html | div[class="instructor"]
+* talking points for instructor
+* easier to read during the workshop
+///
+
+
+
 ## Custom code blocks
 
 ```{.text .leap}
@@ -127,7 +187,6 @@ cd ~/scratch/workshop/pdb/6N4O/simulation/sim_pmemd/4-production
 mol new prmtop_nowat.parm7
 mol addfile mdcrd_nowat.xtc step 5
 ```
-
 
 ```{.tcl .file title="~/.vmdrc"}
 # VMD settings: file ~/.vmdrc
