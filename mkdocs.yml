@@ -80,7 +80,7 @@ plugins:
   - bibtex:
       bib_file: "references.bib"
       csl_file: "csl/plos-one.csl"
-  - markdown-filter
+  - markupsafe-markdown-filter
   - search
 
 markdown_extensions:
