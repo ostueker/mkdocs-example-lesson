@@ -8,6 +8,8 @@ jobs:
     name: Deploy docs to GitHub Pages
     runs-on: ubuntu-latest
     steps:
+      - name: Install pandoc
+        run: sudo apt install -y pandoc  pandoc-citeproc
       - name: Checkout 
         uses: actions/checkout@v2
       - name: Build
