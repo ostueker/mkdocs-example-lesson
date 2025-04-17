@@ -1,5 +1,5 @@
 mkdocs
-mkdocs-material
+mkdocs-material==9.6.11
 mkdocs-markupsafe-markdown-filter
-mkdocs-bibtex
-
+mkdocs-bibtex==2.21.0
+pandoc
