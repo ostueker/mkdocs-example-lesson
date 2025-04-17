@@ -157,9 +157,7 @@
 
 <form class="md-header__option toggle_instructor_view" title="Toggle between learner- and instructor-view" data-toggle="tooltip">
   <label class="md-header__button switch">
-    <input type="checkbox">
-    <span class="instructor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 17a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H9.46c.35.61.54 1.3.54 2h10v11h-9v2m4-10v2H9v13H7v-6H5v6H3v-8H1.5V9a2 2 0 0 1 2-2zM8 4a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2"/></svg></span>
-    <span class="learner"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4l.11-.94L5 5.5 12 2l7 3.5v5h-1V6l-2.11 1.06zm-4 6c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></span>
+    <span class="instructor" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 17a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H9.46c.35.61.54 1.3.54 2h10v11h-9v2m4-10v2H9v13H7v-6H5v6H3v-8H1.5V9a2 2 0 0 1 2-2zM8 4a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2"/></svg></span><span class="learner"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4l.11-.94L5 5.5 12 2l7 3.5v5h-1V6l-2.11 1.06zm-4 6c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></span><input type="checkbox">
   </label>
 </form>
 
@@ -389,7 +387,10 @@
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> scientific references and bibliography</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> LaTeX Math (KaTeX)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> instructor view</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> instructor view<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> make icons line up nicer in the navbar</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -419,7 +420,7 @@
   
   <table class="table table-striped table-hover" style="border: 1;">
     <tr>
-      
+      <td class="col-md-1"></td>
       <td class="col-md-2"></td>
       <td class="col-md-3"><a href="/setup">Setup</a></td>
       <td class="col-md-7">Download files required for the lesson</td>
@@ -427,7 +428,7 @@
 
     
     <tr>
-      <td class="col-md-2">
+      <td class="col-md-1">Day 1</td><td class="col-md-1">
         09:00
       </td>
       <td class="col-md-3">1. <a href="episodes/01-design/">Lesson Design</a></td>
@@ -435,62 +436,122 @@
       </tr>
       
       <tr>
-      <td class="col-md-2">
-        09:00
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:05
       </td>
       <td class="col-md-3">2. <a href="episodes/02-tooling/">GitHub, Markdown, and MkDocs</a></td>
       <td class="col-md-7"><p>How are pages published?</p></td>
       </tr>
       
       <tr>
-      <td class="col-md-2">
-        09:10
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:15
       </td>
       <td class="col-md-3">3. <a href="episodes/03-organization/">Lesson Organization</a></td>
       <td class="col-md-7"><p>How are the files in a lesson organized?</p></td>
       </tr>
       
       <tr>
-      <td class="col-md-2">
-        09:20
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:25
       </td>
       <td class="col-md-3">4. <a href="episodes/04-formatting/">Formatting</a></td>
       <td class="col-md-7"><p>How are The lessons formatted?</p></td>
       </tr>
       
       <tr>
-      <td class="col-md-2">
-        09:30
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:35
       </td>
       <td class="col-md-3">5. <a href="episodes/05-advanced-formatting/">Advanced Formatting</a></td>
       <td class="col-md-7"><p>What formatting options are available that go beyond those of the 'Carpentries' framework?</p></td>
       </tr>
       
       <tr>
-      <td class="col-md-2">
-        09:40
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:45
       </td>
       <td class="col-md-3">6. <a href="episodes/07-checking/">Checking and Previewing</a></td>
       <td class="col-md-7"><p>How can lesson formatting be checked?</p><p>How can lessons be previewed?</p></td>
       </tr>
       
       <tr>
-      <td class="col-md-2">
-        09:45
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:50
       </td>
       <td class="col-md-3">7. <a href="episodes/08-break/">Section Break</a></td>
       <td class="col-md-7">Break</td>
       </tr>
       
       <tr>
-      <td class="col-md-2">
-        10:00
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:05
       </td>
       <td class="col-md-3">8. <a href="episodes/09-introduction/">Introduction</a></td>
       <td class="col-md-7"><p>Key question (FIXME)</p></td>
       </tr>
       
-      <tr><td class="col-md-2">10:20</td>
+      
+    <tr><td class="col-md-1"></td><td class="col-md-1">10:25</td>
+      <td class="col-md-3">Finish</td>
+      <td class="col-md-7"></td>
+    </tr><tr>
+      <td class="col-md-1">Day 2</td><td class="col-md-1">
+        09:00
+      </td>
+      <td class="col-md-3">9. <a href="episodes/10-day2-episode1/">Day 2 Episode 1</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
+      
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:20
+      </td>
+      <td class="col-md-3">10. <a href="episodes/11-day2-episode2/">Day 2 Episode 2</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
+      
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        09:40
+      </td>
+      <td class="col-md-3">11. <a href="episodes/12-day2-episode3/">Day 2 Episode 3</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
+      
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:00
+      </td>
+      <td class="col-md-3">12. <a href="episodes/13-day2-episode4/">Day 2 Episode 4</a></td>
+      <td class="col-md-7"><p>Key question (FIXME)</p></td>
+      </tr>
+      
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:20
+      </td>
+      <td class="col-md-3">13. <a href="episodes/14-day2-episode5/"></a></td>
+      <td class="col-md-7"></td>
+      </tr>
+      
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:20
+      </td>
+      <td class="col-md-3">14. <a href="episodes/15-day2-episode6/"></a></td>
+      <td class="col-md-7"></td>
+      </tr>
+      
+      <tr>
+      <td class="col-md-1"></td><td class="col-md-1">
+        10:20
+      </td>
+      <td class="col-md-3">15. <a href="episodes/16-day2-episode7/"></a></td>
+      <td class="col-md-7"></td>
+      </tr>
+      
+      <tr><td class="col-md-1"></td><td class="col-md-1">10:20</td>
         <td class="col-md-3">Finish</td>
         <td class="col-md-7"></td>
       </tr>
